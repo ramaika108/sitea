@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/app/static/css/main.2175c33b.css",
+    "main.js": "/app/static/js/main.bda7c283.js",
+    "static/media/RubikBeastly-Regular.woff2": "/app/static/media/RubikBeastly-Regular.a8901e6a14f1b47c3e8b.woff2",
+    "static/media/patch.png": "/app/static/media/patch.e70cc81e96a04bcee108.png",
+    "static/media/denim.png": "/app/static/media/denim.2a0d4659cd1540a69132.png",
+    "static/media/work.jpg": "/app/static/media/work.db8a4c16070b7ce8fde8.jpg",
+    "static/media/Underdog-Regular.woff2": "/app/static/media/Underdog-Regular.53b0a16f5a186ec0cf1c.woff2",
+    "static/media/roboto-bolditalic-webfont.woff2": "/app/static/media/roboto-bolditalic-webfont.fb597ee5d17d6a6d1abc.woff2",
+    "static/media/roboto-italic-webfont.woff2": "/app/static/media/roboto-italic-webfont.e9c0eebf04366d0311cf.woff2",
+    "static/media/roboto-bold-webfont.woff2": "/app/static/media/roboto-bold-webfont.6d9fb460b0ce7a5b5fd5.woff2",
+    "static/media/roboto-regular-webfont.woff2": "/app/static/media/roboto-regular-webfont.280536e09b2c6ab2d514.woff2",
+    "static/media/astronom.png": "/app/static/media/astronom.173ff0287ac988fcad10.png",
+    "static/media/path.png": "/app/static/media/path.25244ca50986273b2038.png",
+    "index.html": "/app/index.html",
+    "static/media/angle-down-solid.svg": "/app/static/media/angle-down-solid.6a7b29a0c3c2d2a7a7ec9e1026e44563.svg",
+    "main.2175c33b.css.map": "/app/static/css/main.2175c33b.css.map",
+    "main.bda7c283.js.map": "/app/static/js/main.bda7c283.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2175c33b.css",
+    "static/js/main.bda7c283.js"
+  ]
+}
