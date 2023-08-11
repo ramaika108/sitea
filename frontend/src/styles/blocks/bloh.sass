@@ -1,0 +1,111 @@
+.bloh__heading-wrapper 
+  margin: 62px 0 35px
+  width: 100%
+  text-align: center
+
+.bloh__decoration-imgs 
+  position: absolute
+  width: 100%
+  display: flex
+  justify-content: space-between
+  @media (max-width : 992px)
+    max-width: 157px
+
+
+.bloh__decoration-imgs img
+  width: 100%
+  height: auto
+  max-width: 207px
+  image-rendering: pixelated
+  image-rendering: crisp-edges
+  @media (max-width : 768px)
+    max-width: 107px
+  @media (max-width : 576px)
+    max-width: 80px
+
+.bloh__heading-wrapper h3
+  font-size: 38px
+  text-align: center
+  margin-bottom: 50px
+
+
+.bloh__categories 
+  position: relative
+  padding: 19px
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25)
+  margin-bottom: 33px
+  background-color: #fff
+  text-align: left
+
+.bloh__categories::before 
+  z-index: -1
+  background-size: 3%
+
+.categories__heading 
+  display: inline-block
+  margin-bottom: 15px
+
+.categories__items 
+  list-style-type: none
+  margin: 0
+  padding: 0
+  font-size: 20px
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+  transition: max-height .25s ease-in-out
+  @media (max-width : 576px)
+    justify-content: flex-end
+    max-height: 0
+    z-index: -1000
+    li
+      opacity: 0
+    &::after
+      content: 'показать'
+      opacity: 1
+      position: absolute
+      top: 0
+      right: 0
+      padding: 15px 25px
+    &:hover
+      max-height: 100%
+      opacity: 1
+      li
+        opacity: 1
+      &::after
+        content: 'вот что есть'
+
+.categories__items li, .article__heading p 
+  margin: 0
+  padding: 0
+  font-size: 16px
+  padding: 5px 15px
+  background-color: lightblue
+  margin-bottom: 15px
+  margin-right: 15px
+  border-radius: 19px
+  cursor: pointer
+  transition: transform .25s ease-in-out,  box-shadow .25s ease-in-out
+
+.categories__items li:hover
+  @media (min-width : 768px)
+    transform: translateY(-10px)
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25)
+
+.categories__items .active-category
+  transform: translateY(-10px)
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25)
+
+
+.bloh__content 
+  margin-bottom: 35px
+
+
+.bloh__pagination--bottom 
+  margin-bottom: 55px
+
+
+.bloh__alert 
+    text-align: center
+    padding: $st-margin 0
+

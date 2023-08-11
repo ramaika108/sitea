@@ -1,0 +1,125 @@
+// USER VARIABLES SECTION
+
+$accent: #ff7fed// Accent Color
+$accent-light: #A4C7A5 // Accent Color
+$fontsize: 18px // Body Font Size
+$font-size-root: 18px // Body Font Size
+$textcolor: #3B3B3B// Text Color
+$text-dark: #222222
+$text-light: #808080
+$text-faint: rgba(51, 51, 51, 0.6)
+$text-footer: #B9B9B9
+
+$lineheight: 1.65
+$userfont: underdog-ez, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+$bg: #EEEEEE
+$bg-light: #F7F7F7
+
+$border-light: #FAFAFA
+
+$yellow-bg-light: #FFFAE8
+$separator: #E5E5E5
+$separator-hover: #CDCDCD
+$needle-color: #a0a0a0
+
+//$st-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25)
+$st-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25)
+
+$button-hover: #98C88C
+$button-pressed: #58A742
+
+$spacing-big: 24px
+$spacing-sm: 12px
+
+$sm-margin: 19px
+$st-margin: 65px
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+/* FONTS LOAD SECTION */
+
+@font-face 
+  src: url("../fonts/roboto-regular-webfont.woff2") format("woff2")
+  font-family: "roboto-ez"
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  src: url("../fonts/roboto-italic-webfont.woff2") format("woff2")
+  font-family: "roboto-ez"
+  font-weight: 400
+  font-style: italic
+ 
+@font-face
+  src: url("../fonts/roboto-bold-webfont.woff2") format("woff2")
+  font-family: "roboto-ez"
+  font-weight: 700
+  font-style: normal
+ 
+@font-face
+  src: url("../fonts/roboto-bolditalic-webfont.woff2") format("woff2")
+  font-family: "roboto-ez"
+  font-weight: 700
+  font-style: italic
+
+@font-face
+  src: url("../fonts/woff2/Underdog-Regular.woff2") format("woff2")
+  font-family: "underdog-ez"
+  font-weight: 700
+  font-style: italic
+
+@font-face
+  src: url("../fonts/woff2/RubikBeastly-Regular.woff2") format("woff2")
+  font-family: "rubik-beasty-ez"
+  font-weight: 700
+  font-style: italic
+ 
+// IMPORT SECTION
+
+@import micromodal
+
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
+
+input, textarea
+  outline: none
+  &:focus:required:invalid
+      border-color: red
+  &:required:valid
+      border-color: green
+
+body
+  font-family: $userfont
+  font-size: $fontsize
+  line-height: $lineheight
+  color: $textcolor
+  min-width: 320px
+  position: relative
+  overflow-x: hidden
+  background-image: url(../images/notebook-bg.png)
+  background-repeat: repeat
+  background-size: 57px
+
+a
+  color: $textcolor
+  transition: color .25s ease-in-out
+  text-decoration: none
+  position: relative
+  transition: color .25s ease-in-out
+  &:hover
+    color: $accent
+
+p
+  a
+    text-decoration: underline

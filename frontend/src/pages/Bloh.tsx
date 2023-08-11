@@ -45,17 +45,12 @@ const Bloh = () => {
 		<section className="last-news--bloh">
 			<div className="bloh__heading-wrapper">
 				<div className="bloh__heading">
-					<div className="bloh__decoration-imgs">
-                        <img src={bloh1} alt="Сочиняем блох" />
-                        <img src={bloh2} alt="Гоняем блох" />
-					</div>
 
 					<h3>Блох</h3>
-                    <Pagination pagination={posts?.pagination}/>
 				</div>
 			</div>
 
-			<div className="bloh__categories">
+			<div className="bloh__categories" id="top">
 				<h4 className="categories__heading">Категории:</h4>
 				<ul className="categories__items">
                     {categories && categories.map((c) => {

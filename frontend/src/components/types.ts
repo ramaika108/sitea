@@ -8,6 +8,7 @@ export type BlohType = {
 id:number
 title:string
 category:string
+category_id:string
 main_img:string
 description:string
 body:string
@@ -21,7 +22,7 @@ export interface Posts  {
     pagination: any
 }
 
-export type Horoscope = {
+export type HoroscopeType = {
     id: number
     weather: string
     mood: string
@@ -32,4 +33,14 @@ export type Horoscope = {
     tasks: string
     advise: string
     pokrov: string
+}
+
+
+export type Page = {
+    img: string,
+    info: string,
+}
+
+export interface Dictionary<T> {
+   [Key: string]: T;
 }

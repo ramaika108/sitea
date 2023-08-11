@@ -15,6 +15,7 @@ const Pagination = ({color='dark', extraClass='', pagination}:PaginationInterfac
 
     const setPage = (pageNumber:number) => {
         setSearchParams({page: pageNumber.toString()})
+        document?.getElementById('top')?.scrollIntoView();
     }
 
     const changePage = (incrementBy:number) => {
@@ -22,6 +23,7 @@ const Pagination = ({color='dark', extraClass='', pagination}:PaginationInterfac
         if (pageNumber) {
             let newPageNumber = Number(pageNumber) + incrementBy
             setSearchParams({page: (newPageNumber).toString()})
+            document?.getElementById('top')?.scrollIntoView();
             return
         }
         setSearchParams({page: '2'})    //use is on first page initially
@@ -40,7 +42,7 @@ const Pagination = ({color='dark', extraClass='', pagination}:PaginationInterfac
             {[...Array(pagination?.total)].map((e, i) => {
                 i ++
                 if (i === pagination?.current) {
-                    return(<div className="pagination-item pagination-item--active">{i}</div>)
+                    return(<div className="pagination-item pagination-item--active" key={e}>{i}</div>)
                 }
                 return(<div onClick={() => setPage(i)} className="pagination-item" key={e}>{i}</div>)
             })}

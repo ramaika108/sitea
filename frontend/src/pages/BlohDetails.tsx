@@ -3,7 +3,9 @@ import {useParams} from "react-router";
 import Fetch from "../components/Fetch";
 import { BlohType } from "../components/types";
 
-const BlohDetails =  () => {
+import { Link } from 'react-router-dom';
+
+const BlohDetails = () => {
 
     const {id} = useParams();
     const [blog, setBlog] = useState<BlohType>();
@@ -16,11 +18,11 @@ const BlohDetails =  () => {
 	<div className="container">
 
 		<div className="row justify-content-center">
-            {blog && (<div className="col-lg-8">
+            {blog && (<div className="col-lg-10 article__wrapper">
 
 				<div className="article__heading">
 					<h3>{blog.title}</h3>
-					<p>{blog.category}</p>
+                    <Link to={'/blohs?category='+blog.category_id}><p>{blog.category}</p></Link>
 				</div>
 
                 <img src={'/app/photos/'+blog.main_img} alt="" className="article__main-img" />

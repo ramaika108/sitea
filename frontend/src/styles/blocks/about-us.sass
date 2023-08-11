@@ -1,0 +1,77 @@
+.about-us 
+  position: relative
+  background-size: 4%
+  margin: $st-margin 0
+  padding: 38px 25px 65px 56px
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25)
+  z-index: 1
+  background-color: #fff
+  @media (max-width : 576px)
+    padding: 19px 12.5px 32.5px 28px
+
+.about-us h3 
+  font-size: 28px
+  text-decoration: underline
+  text-align: left
+  margin-bottom: 11px
+  @media (max-width : 576px)
+    margin-top: 15px
+  @media (max-width : 321px)
+    margin: 0
+    margin-bottom: 11px
+
+.about-us ol 
+  font-size: 20px
+  display: inline-block
+
+.about-us li 
+  padding: 5px
+
+.about-us li a 
+  border: none
+
+.about-us li span 
+  text-decoration-line: line-through
+
+.about-us h4 
+  text-align: center
+  font-size: 28px
+  margin-bottom: $sm-margin
+
+.about-us__goto-contents
+  float: right
+  opacity: .5
+  transition: opacity .25s ease-in-out
+  &:hover
+    opacity: 1
+
+.about-us
+  article 
+    @media (max-width : 576px)
+      font-size: 18px
+
+.about-us__pagination 
+  margin-top: 45px
+  display: flex
+  align-items: center
+  justify-content: space-around
+  @media (max-width : 992px)
+    flex-direction: column
+
+.about-us__pagination a
+  padding: 10px
+  background-color: #fff
+  border-radius: 5px
+  margin: $sm-margin
+  border: none
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25)
+
+.about-us__pagination a:first-child
+  justify-self: start
+
+.about-us__pagination a:nth-child(2)::before
+  content: '<< '
+
+.about-us__pagination a:nth-child(3)::after
+  content: ' >>'
+

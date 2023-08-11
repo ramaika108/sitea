@@ -24,19 +24,31 @@ def get_horoscope():
     horoscope_types = [
         {'name': 'weather', 'id': 1},
         {'name': 'mood', 'id': 2},
+        {'name': 'nyamka', 'id': 3},
+        {'name': 'tasks', 'id': 4},
+        {'name': 'advise', 'id': 5},
+        {'name': 'pokrov', 'id': 6},
+    ]
+
+    premi_pischi = [
         {'name': 'breakfast', 'id': 3},
         {'name': 'lunch', 'id': 3},
         {'name': 'supper', 'id': 3},
         {'name': 'night', 'id': 3},
-        {'name': 'tasks', 'id': 4},
-        {'name': 'advise', 'id': 5},
-        {'name': 'pokrov', 'id': 6},
     ]
     
     horoscope = Horoscope.query.order_by(func.random())
     horoscope_schema = HoroscopeSchema(many=True)
     result = {}
     for type in horoscope_types:
+
+        if type['id'] == 3:
+            tmp = horoscope.filter_by(type=type['id']).limit(4)
+            nyamkas = horoscope_schema.dump(tmp)
+            for i in range(4):
+                result[premi_pischi[i]['name']] = nyamkas[i]['body']
+            continue
+
         tmp = horoscope.filter_by(type=type['id']).limit(1)
         result[type['name']] = horoscope_schema.dump(tmp)[0]['body']
     print(result)

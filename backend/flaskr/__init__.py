@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, redirect, request
 
 from flaskr.db import db, ma
 
@@ -33,17 +33,24 @@ def create_app(test_config=None):
     db.init_app(app)
     
     # apply the blueprints to the app
-    from .routes import bloh, afonarizms, humor_pump, horoscope
+    from .routes import bloh, afonarizms, humor_pump, horoscope, about
 
     app.register_blueprint(bloh.bp, url_prefix='/api/v1')
     app.register_blueprint(afonarizms.bp, url_prefix='/api/v1')
     app.register_blueprint(humor_pump.bp, url_prefix='/api/v1')
     app.register_blueprint(horoscope.bp, url_prefix='/api/v1')
+    app.register_blueprint(about.bp, url_prefix='/api/v1')
 
 
     @app.route('/', defaults={'path': ''})
     @app.route('/<path:path>')
     def catch_all(path):
-        return app.send_static_file("index.html")
+        secure_connection = request.base_url[:5] != 'http:'
+
+        if secure_connection:   #development
+        # if not secure_connection: #production
+            return redirect(request.base_url.replace('http', 'https'))
+        
+        return  app.send_static_file("index.html")
 
     return app

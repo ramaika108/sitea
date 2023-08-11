@@ -1,0 +1,33 @@
+.disclamier
+  background-color: yellow
+  position: relative
+  width: 100%
+  box-shadow: $st-shadow
+  z-index: 100000
+  @media (max-width : 768px)
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+.disclaimer__text 
+  padding: $sm-margin
+  margin-right: 11px
+
+.disclaimer__close-btn
+  position: absolute
+  top: 9px
+  right: 9px
+  border: 1px solid $textcolor
+  width: 23px
+  height: 23px
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer  
+  transition: background-color .25s ease-in-out
+  background-color: #fff
+
+.disclaimer__close-btn:hover
+  background-color: red
+

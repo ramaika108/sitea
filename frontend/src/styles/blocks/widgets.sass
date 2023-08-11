@@ -1,0 +1,51 @@
+.widgets
+  text-align: center
+
+.widget-item
+ text-align: center
+ &:hover
+  user-select: none
+  h3
+    color: $accent
+ h3
+  font-size: 24px
+  text-decoration: underline
+  transition: .25s ease-in-out color
+  @media (max-width : 768px)
+    margin-bottom: 30px
+
+
+.widget-item__wrapper
+  width: 238px
+  height: 238px
+  background-image: url('../../images/denim.png')
+  background-color: rgba(255, 255, 255, 0.1)
+  text-align: center
+  padding: auto
+  margin: 0 auto 10px
+  position: relative
+  display: flex
+  cursor: pointer
+  img
+    margin: auto
+
+.widgets__wrapper
+  .widget-item:nth-child(even)
+    .widget-item__wrapper
+      background-color: rgba(20, 174, 92, 0.6) 
+
+.widget-item__counter
+  position: absolute
+  top: 20px
+  right: 20px
+  background-color: #14AE5C 
+  padding: 0 5px
+  line-height: 22px
+  color: #fff
+
+.widgets__vsyaka-heading
+  h3
+    margin-bottom: 25px
+
+// Сильная Солнечная активность, это когда солнышко ищет и не может найти своего младшего братика ёжика
+// Kiril to Glag reader, with option to sellect the replacement letters, like in method, for now fb2

@@ -21,7 +21,7 @@ def afonarizms():
     return jsonify(afonarizms), 200
 
 #SQL FUNCTIONS
-afonarizms_per_page = 3
+afonarizms_per_page = 6
 def get_afonarizms(page):
     tmp = Afonarizm.query
     total_pages, page = calculate_total_pages(tmp, afonarizms_per_page, page)

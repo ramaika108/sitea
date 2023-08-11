@@ -2,8 +2,9 @@ from flask import Blueprint
 from flask import request
 from flask import jsonify
 
-
 from flaskr.models.humor import Humor, HumorSchema
+
+from flaskr.utils.calculate_total_pages import calculate_total_pages
 
 bp = Blueprint("humor_pump", __name__)
 
@@ -22,11 +23,11 @@ def humor_pump():
     return jsonify(humor), 200
 
 #SQL FUNCTIONS
-
+puddles_per_page = 6
 def get_humor(page):
-    page -= 1
-    humor = Humor.query.all()
-    #count = tmp.count()
-    #blohs = tmp.offset(blohs_per_page*page).limit(blohs_per_page)
-    humor_schema = HumorSchema(many=True)
-    return humor_schema.dump(humor)
+    tmp = Humor.query
+    total_pages, page = calculate_total_pages(tmp, puddles_per_page, page)
+
+    puddles = tmp.offset(puddles_per_page*page).limit(puddles_per_page)
+    puddles_schema = HumorSchema(many=True)
+    return {'puddles': puddles_schema.dump(puddles), 'pagination': {'total': total_pages, 'current': page+1}}

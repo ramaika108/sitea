@@ -1,0 +1,161 @@
+.home__note-top
+  margin: 50px 0 105px
+  @media (max-width : 1200px)
+    margin: 20px 0 65px
+
+.home__note-bottom
+  margin: 105px 0 50px
+  @media (max-width : 1200px)
+    margin-top: 60px
+  @media (max-width : 992px)
+    margin-bottom: 20px
+  @media (max-width : 768px)
+    margin-top: 30px
+  @media (max-width : 576px)
+    margin-bottom: 50px
+  @media (max-width : 320px)
+    margin-top: 0
+    margin-bottom: 30px
+
+
+/*HOROSCOPE*/
+
+h3
+  text-align: center
+  margin: 25px
+  margin-bottom: 50px
+
+.horoscope__content 
+  display: flex
+  position: relative
+  @media (max-width : 768px)
+    flex-direction: column
+    flex-direction: column-reverse
+
+.content__wheel 
+  position: relative
+  margin: 0 auto
+  flex: 0 50%
+  text-align: center
+  @media (max-width : 768px)
+    flex: 0 100%
+
+.wheel__options 
+  background-color: #fff
+  margin: 0 auto
+  list-style-type: none
+  display: block
+  position: relative
+  width: 500px
+  height: 500px
+  border: 1px solid #000
+  border-radius: 100%
+  box-shadow: $st-shadow
+  @media (max-width : 992px)
+    max-height: 250px
+    max-width: 250px
+
+.wheel__options li
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  text-align: center
+  padding: 15px
+
+.wheel__options li:nth-child(2)
+  transform: rotate(60deg)
+
+.wheel__options li:nth-child(3)
+  transform: rotate(120deg)
+
+.wheel__options li:nth-child(4)
+  transform: rotate(180deg)
+
+.wheel__options li:nth-child(5)
+  transform: rotate(240deg)
+
+.wheel__options li:nth-child(6)
+  transform: rotate(300deg)
+
+.content__wheel img 
+  position: absolute
+  right: 0
+  left: 0
+  bottom: 0
+  top: 0
+  margin: 0 auto
+  transition: transform 3s ease-in-out
+  @media (max-width : 992px)
+    height: 250px
+    width: 250px
+    flex: 0 30%
+
+.horoscope_button
+  background-color: #fff
+  display: inline-block
+  padding: 0 38px
+  font-size: 24px
+  box-shadow: $st-shadow
+  border: 1px solid $textcolor
+  margin: 14px
+  position: relative
+  transition: background-color .25s ease-in-out
+  &:hover
+    background-color: darken(#fff, 5%)
+
+
+.content__desc 
+  text-align: right
+  flex: 0 50%
+  @media (max-width : 992px)
+    flex: 0 70%
+  @media (max-width : 768px)
+    flex: 0 100%
+
+.content__desc p   
+  background-color: #fff
+  padding: 19px
+  text-align: right
+  border: 1px solid #000
+  border-radius: 19px 19px 0px 19px
+
+
+.horoscope-detail-wrapper 
+  animation: k-horoscope-detail 2s ease-out
+  background-color: #fff
+  border: 1px solid $textcolor
+  position: relative
+  box-shadow: $st-shadow
+  &::after
+    content: ''
+    position: absolute
+    inset: 0
+    animation: k-horoscope-detail-overlay 2s ease-out
+
+.content__desc h4   
+  font-size: 24px
+  text-align: left
+  margin-bottom: 10px
+  padding: 15px 15px 0
+
+.content__desc ul   
+  text-align: left
+  border-top: 1px solid $textcolor
+
+.content__desc ul li  
+  padding: 0 10px 0 0
+
+
+@keyframes k-horoscope-detail
+    0%
+        transform: rotateX(180deg)
+
+@keyframes k-horoscope-detail-overlay
+    0%
+        background-color: #fff
+    50%
+        background-color: #fff
+    100%
+        background-color: transparent

@@ -1,0 +1,106 @@
+.last-news, .last-news--bloh 
+  position: relative
+  text-align: center
+
+.last-news__heading-wrapper 
+  display: flex
+  justify-content: center
+  justify-content: space-between
+  justify-content: space-around
+  align-items: center
+
+.last-news__heading-wrapper img
+  max-height: 108px
+  @media (max-width : 992px)
+    max-height: 90px
+  @media (max-width : 768px)
+    display: none
+
+.last-news__heading 
+  text-align: center
+
+.last-news__heading h3
+  font-size: 28px
+
+.last-news__heading p
+  font-size: 18px
+  padding: 0 $sm-margin
+
+
+.news-list-item 
+  margin-bottom: $gutter
+  position: relative
+  @media (max-width : 1200px)
+    margin-bottom: 20px
+
+.news-list-item__wrapper
+  text-align: left
+  background-color: $bg-light
+  transition: background-color .25s ease-in-out
+  padding: 15px
+  height: 100%
+  box-shadow: $st-shadow
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.news-list-item__wrapper:hover 
+  background-color: $yellow-bg-light
+
+.news-list-item__wrapper:hover
+  .news-list-item__img
+    filter: grayscale(10%)
+
+.news-list-item h3 
+  font-size: 20px
+  text-align: center
+  margin: 0
+  margin-bottom: 15px
+
+.news-list-item__img 
+  height: 200px
+  width: 100%
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: top center
+  margin: 0 auto 15px
+  filter: grayscale(100%)
+  transition: filter .25s ease-in-out
+  @media (max-width : 576px)
+    width: 100%
+    min-height: 182px
+    height: auto
+    position: relative
+
+.news-list-item p 
+  font-size: 16px
+  margin: 0
+  
+.news-list-item__wrapper>p::after 
+  content: '...'
+
+
+.news-list-item__footer 
+  margin-top: 15px
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex: 0 0 16px
+  font-size: 16px
+  a, p
+    color: $text-faint
+
+.show-more 
+  font-size: 20px
+  background-color: #fff
+  display: inline-block
+  text-align: center
+  padding: 10px 20px
+  box-shadow: $st-shadow
+  margin: 0 auto
+  margin-bottom: 70px
+  @media (max-width : 1200px)
+    margin-bottom: 40px
+
